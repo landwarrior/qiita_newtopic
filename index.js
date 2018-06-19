@@ -35,7 +35,7 @@ var handlers = {
                     var num = i + 1;
                     message += num + 'つ目。' + data_list[i]['title'] + '。';
                 }
-                self.emit(':tell', start + message);
+                self.emit(':tellWithCard', start + message, 'Qiita新着タイトル', message);
                 return;
             });
         }).on('error', function(e) {
